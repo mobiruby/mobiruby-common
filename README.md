@@ -1,6 +1,10 @@
 # mobiruby-common
 
-Common utilities for MobiRuby all platforms.
+Common utilities among MobiRuby all platforms.
+
+## Provided functions
+
+* require / load
 
 
 ## License
