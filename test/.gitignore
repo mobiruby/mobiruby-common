@@ -1,1 +1,2 @@
-cfunc_test
+t/*.exe
+t/*.c
