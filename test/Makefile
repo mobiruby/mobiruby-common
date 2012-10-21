@@ -84,8 +84,6 @@ $(TESTOBJS) : %.o : %.rb
 	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $(basename $<).c -o $@
 
 $(REQUIREOBJS) : %.o : %.rb
-	echo $<
-	echo $(basename $<)
 	$(MRBC) -Bmruby_data_`basename $(basename $<)` $<
 	$(CC) $(ALL_CFLAGS) -MMD $(INCLUDES) -c $(basename $<).c -o $@
 
