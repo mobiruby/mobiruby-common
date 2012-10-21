@@ -1,3 +1,5 @@
+# load from 'require.rb'
+
 def require_test_1
   "REQUIRE_TEST_1"
 end
