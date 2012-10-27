@@ -50,7 +50,7 @@ load_file(mrb_state *mrb, mrb_value filename)
 
   if (!data) {
     dlclose(dlh);
-    mrb_raise(mrb, E_SCRIPT_ERROR, "file '%s' not found.", RSTRING_PTR(str));
+    mrb_raisef(mrb, E_SCRIPT_ERROR, "file '%s' not found.", RSTRING_PTR(str));
   }
   n = mrb_read_irep(mrb, data);
   dlclose(dlh);
