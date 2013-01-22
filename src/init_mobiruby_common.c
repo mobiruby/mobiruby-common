@@ -9,7 +9,12 @@
 
 #include "mruby.h"
 
-void init_mobiruby_common_module(mrb_state *mrb)
+void mrb_mobiruby_common_gem_init(mrb_state *mrb)
 {
     mrb_init_kernel_require(mrb);  /* initialize this library */
+}
+
+void mrb_mobiruby_common_gem_final(mrb_state *mrb)
+{
+    // finalizer
 }
