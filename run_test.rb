@@ -12,6 +12,9 @@ end
 MRuby::Build.new do |conf|
   toolchain :gcc
   conf.cc.defines << %w(MRB_INT64)
-  conf.gem :github => 'mobiruby/mruby-cfunc'
+  conf.gem :github => 'mobiruby/mruby-cfunc' do |g|
+    # g.use_pkg_config
+    g.download_libffi
+  end
   conf.gem File.expand_path(File.dirname(__FILE__))
 end
