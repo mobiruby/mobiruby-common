@@ -13,6 +13,7 @@ MRuby::Gem::Specification.new('mobiruby-common') do |spec|
     file "#{basename}.c" => f do |t|
       FileUtils.mkdir_p File.dirname(t.name)
       open(t.name, 'w') do |out|
+        out.puts '#include <stdint.h>'
         mrbc.run out, f, "mruby_data_#{File.basename(basename).gsub('-','_')}"
       end
     end
